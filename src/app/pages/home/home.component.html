@@ -1,0 +1,19 @@
+<!-- home.component.html -->
+<div class="home-container">
+    <h1>Movie List</h1>
+  
+    <!-- Display loading message while movies are being fetched -->
+    <div *ngIf="movies.length === 0">Loading movies...</div>
+  
+    <!-- Display movies once they are fetched -->
+    <div *ngIf="movies.length > 0">
+      <ul>
+        <li *ngFor="let movie of movies">
+          <h2>{{ movie.title }}</h2>
+          <p>{{ movie.description }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  
